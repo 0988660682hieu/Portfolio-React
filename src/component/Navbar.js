@@ -1,26 +1,42 @@
 import React from 'react'
+import logo from "../logo.jpg"
+// React fontawesome import
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-                      
-            <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto ">
-                <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-                </li> 
-                
-            </ul>       
-            </div>
-        
-        
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+          <div className="container">
+            <a className="navbar-brand" href="#"><img class="logo" src={logo} alt="logo"/></a>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <FontAwesomeIcon icon={faBars} style={{color:"#fff"}} />
+            </button>
+                          
+                <div className="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
+                <ul className="navbar-nav ml-auto ">
+                    <li className="nav-item active">
+                    <a className="nav-link" href="#">Home <span class="sr-only">()</span></a>
+                    </li>
+                        <li className="nav-item">
+                          <a className="nav-link " href="#">About me</a>
+                        </li>
+                        <li className="nav-item">
+                          <a className="nav-link" href="#">Services</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">How work</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link " href="#">Porfolio</a>
+                        </li>                        
+                        <li className="nav-item">
+                          <a className="nav-link " href="#">Contact me</a>
+                        </li>
+                </ul>       
+                </div>
+          
+          </div>       
       </nav>
     )
 }
